@@ -32,11 +32,7 @@ class IndicadorBusiness
 
 	private function soap($conf)
 	{
-		$proxy = array(
-			'proxy_host'     => "10.192.38.86",
-			'proxy_port'     => 80,
-			'proxy_login'    => "c090762@CORPCAIXA",
-			'proxy_password' => "Ro3648");
+		$proxy = $this->getProxyConfiguration();
 		$client = SOAP::getInstance($this->url, $proxy);
 		$soapCallResult = $client->call($conf);
 		return $soapCallResult;
@@ -105,5 +101,15 @@ class IndicadorBusiness
 		$conf[0] = 'getValoresSeriesXML';
 		$conf[1] = array('codigoSeries' => array($this->serieCode), 'dataInicio' => $dateBegin, 'dataFim' => $dateEnd);
 		return $this->soap($conf);
+	}
+
+	private function getProxyConfiguration()
+	{
+		$proxy = array(
+			'proxy_host' => "10.192.38.86",
+			'proxy_port' => 80,
+			'proxy_login' => "c090762@CORPCAIXA",
+			'proxy_password' => "Ro3648");
+		return $proxy;
 	}
 }
