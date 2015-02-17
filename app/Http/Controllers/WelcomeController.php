@@ -9,13 +9,10 @@ class WelcomeController extends Controller {
 		$indicadorCDI = new IndicadorBusiness(IndicadorBusiness::$CDI);
 		$cdi = $indicadorCDI->getUltimoIndiceXML()->getValue();
 
-		$indicadorTR = new IndicadorBusiness(IndicadorBusiness::$TR);
-		$tr = $indicadorTR->getUltimoIndiceXML()->getValue();
-
 		$indicadorPoupanca = new IndicadorBusiness(IndicadorBusiness::$POUPANCA);
 		$poupanca = $indicadorPoupanca->getUltimoIndiceXML()->getValue();
 
-		return view('welcome', compact('cdi', 'tr', 'poupanca'));
+		return view('welcome', compact('cdi', 'poupanca'));
 	}
 
 

@@ -1,5 +1,5 @@
 function getIndexPoupanca() {
-    return parseFloat($("#poupanca").val()) + parseFloat($("#tr").val());
+    return parseFloat($("#poupanca").val());
 }
 
 function getIndexCDB() {

@@ -3,7 +3,6 @@
     <h2>Simulador de Investimentos</h2>
     <div class="col-md-4">
         <form>
-            <input type="hidden" name="tr" id="tr" value="{{ $tr }}" />
             <input type="hidden" name="poupanca" id="poupanca" value="{{ $poupanca }}" />
             <div class="form-group">
                 <label for="amount">Valor da Aplicação</label>
