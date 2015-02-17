@@ -5,12 +5,12 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*"
+		"laravel/framework": "5.0.*",
+        "ext-soap": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
 		"phpspec/phpspec": "~2.1",
-        "soap": "*",
         "heroku/heroku-buildpack-php": "*"
 	},
 	"autoload": {
