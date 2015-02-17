@@ -8,10 +8,4 @@ class NavigationTest extends TestCase {
 		$this->assertEquals(200, $response->getStatusCode());
 	}
 
-	public function testAbout()
-	{
-		$response = $this->call('GET', '/about');
-		$this->assertEquals(200, $response->getStatusCode());
-	}
-
 }
