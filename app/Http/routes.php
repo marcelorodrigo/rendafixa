@@ -1,7 +1,5 @@
 <?php
 
-use App\Business\IndicadorBusiness;
-
 Route::get('/', 'WelcomeController@index');
 Route::get('sobre', function(){
 	return view('about');
