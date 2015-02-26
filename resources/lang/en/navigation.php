@@ -1,6 +1,7 @@
 <?php
 return [
 	'toggle.navigation' => 'Toggle navigation',
+	'rendaFixa' => 'Renda Fixa',
 	'indexes' => 'Indexes',
 	'about' => 'About',
 	'updated' => 'Updated',

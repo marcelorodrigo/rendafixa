@@ -1,6 +1,7 @@
 <?php
 return [
 	'toggle.navigation' => 'Alternar Navegação',
+	'rendaFixa' => 'Renda Fixa',
 	'indexes' => 'Indicadores',
 	'about' => 'Sobre',
 	'updated' => 'Atualizado',
