@@ -60,7 +60,7 @@
     <div class="col-md-offset-1 col-md-6">
         <div id="results">
             <h3>Rentabilidade</h3>
-            <p>Veja como fica a rentabilidade do seu invesimento conforme o tipo de aplicação:</p>
+            <p>Simulação da rentabilidade do seu investimento conforme o tipo de aplicação:</p>
             <hr />
             <div id="result-poupanca">
                 <h4>Poupança</h4>
