@@ -10,6 +10,7 @@ class IndicadorVO
 	private $date;
 	private $value;
 	private $unit;
+	private $updated;
 
 	public function getDate()
 	{
@@ -52,7 +53,19 @@ class IndicadorVO
 
 	public function setName($name)
 	{
-		$this->name = (String) $name;
+		$this->name = (String)$name;
+		return $this;
+	}
+
+	public function getUpdated()
+	{
+		return $this->updated;
+	}
+
+
+	public function setUpdated($updated)
+	{
+		$this->updated = $updated;
 		return $this;
 	}
 
