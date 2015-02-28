@@ -4,7 +4,6 @@ return [
 	'rendaFixa' => 'Renda Fixa',
 	'indexes' => 'Indexes',
 	'about' => 'About',
-	'updated' => 'Updated',
 	'selic' => 'SELIC',
 	'cdi' => 'CDI',
 	'ipca' => 'IPCA',

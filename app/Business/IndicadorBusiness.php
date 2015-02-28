@@ -49,7 +49,8 @@ class IndicadorBusiness
 			->setName(mb_convert_encoding($returned->SERIE->NOME,'ISO-8859-1','UTF-8'))
 			->setDate(new \DateTime("$year-$month-$day"))
 			->setValue($returned->SERIE->VALOR)
-			->setUnit($returned->SERIE->UNIDADE);
+			->setUnit($returned->SERIE->UNIDADE)
+			->setUpdated(new \DateTime());
 		return $indicador;
 	}
 
