@@ -1,12 +1,15 @@
 <?php
-
 Route::get('/', 'WelcomeController@index');
-Route::get('sobre', function(){
+
+Route::get('sobre', function () {
 	return view('about');
 });
-Route::get('info', function() {
+
+Route::get('info', function () {
 	phpinfo();
 });
+
+Route::resource('preferences', 'PreferencesController');
 
 Route::get('indicador/{indicador}', 'IndicadorController@show')
 	->where('indicador', '[A-Za-z]+');
