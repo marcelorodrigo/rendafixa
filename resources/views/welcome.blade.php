@@ -2,13 +2,13 @@
 @section('content')
     <h2>{{ trans('simulador.title') }}</h2>
     <div class="col-md-4">
-        <form>
+        {!! Form::open() !!}
             <input type="hidden" name="poupanca" id="poupanca" value="{{ $poupanca }}" />
             <div class="form-group">
                 <label for="amount">{{ trans('simulador.valor.da.aplicacao') }}</label>
                 <div class="input-group">
                     <div class="input-group-addon">R$</div>
-                    <input type="number" class="form-control" id="amount" placeholder="{{ trans('simulador.valor.da.aplicacao') }}" value="1000"
+                    <input type="number" class="form-control" id="amount" placeholder="{{ trans('simulador.valor.da.aplicacao') }}" value="{{$amount}}"
                            min="1"/>
                     <div class="input-group-addon">.00</div>
                 </div>
@@ -16,13 +16,13 @@
             <div class="form-group">
                 <label for="period">{{ trans('simulador.periodo') }}</label>
                 <div class="input-group">
-                    <input type="number" class="form-control" id="period" placeholder="{{ trans('simulador.periodo') }}" value="12" min="1"
+                    <input type="number" class="form-control" id="period" placeholder="{{ trans('simulador.periodo') }}" value="{{ $period}}" min="1"
                            max="1200"/>
                     <div class="input-group-addon">{{ trans('simulador.meses') }}</div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="di">{{ trans('simulador.taxa.di') }} <a href="http://www.cetip.com.br" target="_blank">?</a></label>
+                <label for="di">{{ trans('simulador.taxa.di') }} <a href="http://www.cetip.com.br" target="_blank" title="Cetip">?</a></label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="di" placeholder="{{ trans('simulador.taxa.di') }}" value="{{$cdi}}" min="0"
                            max="100"/>
@@ -42,7 +42,7 @@
             <div class="form-group">
                 <label for="cdb">{{ trans('simulador.cdb') }}</label>
                 <div class="input-group">
-                    <input type="number" class="form-control" id="cdb" placeholder="{{ trans('rendimento.cdb') }}" value="83" min="0"
+                    <input type="number" class="form-control" id="cdb" placeholder="{{ trans('rendimento.cdb') }}" value="{{ $taxcdb }}" min="0"
                            max="100"/>
                     <div class="input-group-addon">% {{ trans('simulador.di') }}</div>
                 </div>
@@ -50,12 +50,12 @@
             <div class="form-group">
                 <label for="lci">{{ trans('simulador.lci.lca') }}</label>
                 <div class="input-group">
-                    <input type="number" class="form-control" id="lci" placeholder="{{ trans('rendimento.lci.lca') }}" value="91"
+                    <input type="number" class="form-control" id="lci" placeholder="{{ trans('rendimento.lci.lca') }}" value="{{ $taxlci }}"
                            min="0" max="100"/>
                     <div class="input-group-addon">% {{ trans('simulador.di') }}</div>
                 </div>
             </div>
-        </form>
+        {!! Form::close() !!}
     </div>
     <div class="col-md-offset-1 col-md-6">
         <div id="results">
