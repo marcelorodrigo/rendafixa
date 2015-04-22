@@ -5,6 +5,7 @@ return [
 	'periodo' => 'Período',
 	'meses' => 'meses',
 	'taxa.di' => 'Taxa DI',
+	'taxa.selic' => 'Taxa SELIC',
 	'ao.ano' => 'ao ano',
 	'cdb' => 'CDB/LC',
 	'rendimento.cdb' => 'Rendimento CDB/LC',
