@@ -15,12 +15,15 @@ class WelcomeController extends Controller
 		$indicadorPoupanca = new IndicadorBusiness(IndicadorBusiness::$POUPANCA);
 		$poupanca = $indicadorPoupanca->getUltimoIndiceXML()->getValue();
 
+		$indicadorSELIC = new IndicadorBusiness(IndicadorBusiness::$SELIC);
+		$selic = $indicadorSELIC->getUltimoIndiceXML()->getValue();
+
 		$amount = Cookie::get(PreferencesVO::PREFERENCES_AMOUNT, PreferencesVO::DEFAULT_AMOUNT);
 		$period = Cookie::get(PreferencesVO::PREFERENCES_PERIOD, PreferencesVO::DEFAULT_PERIOD);
 		$taxcdb = Cookie::get(PreferencesVO::PREFERENCES_TAXCDB, PreferencesVO::DEFAULT_TAXCDB);
 		$taxlci = Cookie::get(PreferencesVO::DEFAULT_TAXLCI, PreferencesVO::DEFAULT_TAXLCI);
 
-		return view('welcome', compact('cdi', 'poupanca', 'amount', 'period', 'taxcdb', 'taxlci'));
+		return view('welcome', compact('cdi', 'poupanca', 'selic', 'amount', 'period', 'taxcdb', 'taxlci'));
 	}
 
 

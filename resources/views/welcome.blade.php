@@ -29,6 +29,17 @@
                     <div class="input-group-addon">% {{trans('simulador.ao.ano')}}</div>
                 </div>
             </div>
+            <div class="form-group">
+                <label for="di">{{ trans('simulador.taxa.selic') }}</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="selic" placeholder="{{ trans('simulador.taxa.selic') }}" value="{{$selic}}" min="0"
+                           max="100"/>
+                    <div class="input-group-addon">% {{trans('simulador.ao.ano')}}</div>
+                </div>
+            </div>
+
+            <!-- separador -->
+
             <!--
             <div class="form-group">
                 <label for="di">Taxa Administrativa</label>
@@ -89,6 +100,19 @@
                 Valor Líquido: R$ <span class="liquido">0</span><br />
                 <div class="progress">
                     <div id="bar-lci" class="progress-bar progress-bar-success" role="progressbar"
+                         style="width: 0%; min-width: 2em;">
+                        0%
+                    </div>
+                </div>
+            </div>
+            <div id="result-tdselic">
+                <h4>Tesouro SELIC</h4>
+                Valor Total: R$ <span class="total">0</span><br />
+                Imposto de Renda: R$ <span class="ir">0</span><br />
+                Taxa Bovespa: R$ <span class="bvmf">0</span><br />
+                Valor Líquido: R$ <span class="liquido">0</span><br />
+                <div class="progress">
+                    <div id="bar-tdselic" class="progress-bar progress-bar-success" role="progressbar"
                          style="width: 0%; min-width: 2em;">
                         0%
                     </div>
