@@ -11,11 +11,8 @@ $().ready(function () {
             type: 'POST',
             url: window.location.protocol + "//" + window.location.host + '/preferences',
             data: preferences,
-            success: function (data) {
-                console.log(data);
-            },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown)
+                console.log('Error saving preferences:' + errorThrown);
             },
             async: true
         });
