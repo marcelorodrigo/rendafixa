@@ -44,7 +44,7 @@ $().ready(function () {
 
     function getIndexIR() {
         var periodo = $("#period").val();
-        if (periodo <= 3) {
+        if (periodo <= 6) {
             return 22.5;
         } else if (periodo <= 12) {
             return 20;
