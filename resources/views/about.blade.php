@@ -9,9 +9,8 @@
             .. e foi que assim que comecei a desenvolver este projeto, buscando as taxas e índices que podem de alguma
             me auxiliar nos calculos que envolvem os rendimentos aplicados em renda fixa.
         </p>
+        <p>
+            Desenvolvido por <a href="http://marcelorodrigo.com">Marcelo Rodrigo</a> e alguns <a href="https://github.com/marcelorodrigo/rendafixa/graphs/contributors" title="GitHub Contributors">alguns amigos</a>.
+        </p>
     </div>
-
-    <p>
-        TODO: continuar esta página, assim como todo o restante do projeto.
-    </p>
 @endsection
