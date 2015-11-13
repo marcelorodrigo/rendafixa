@@ -19,19 +19,24 @@ $().ready(function () {
     }
 
     function getIndexPoupanca() {
-        return parseFloat($("#poupanca").val());
+        return parseFloat($("#poupanca").val()) / 100 + 1;
     }
 
     function getIndexCDB() {
-        return ($("#cdb").val() / 100) * getIndexDI() / 12;
+        var taxa = parseFloat($("#cdb").val()) / 100;
+        var di = parseFloat($("#di").val());
+        return Math.pow(((taxa * di) / 100 + 1), (1/12));
     }
 
     function getIndexTDSELIC() {
-        return getIndexSELIC() / 12;
+      var selic = parseFloat($("#selic").val());
+      return Math.pow((selic / 100 + 1), (1/12));
     }
 
     function getIndexLCI() {
-        return ($("#lci").val() / 100) * getIndexDI() / 12;
+      var taxa = parseFloat($("#lci").val()) / 100;
+      var di = parseFloat($("#di").val());
+      return Math.pow(((taxa * di) / 100 + 1), (1/12));
     }
 
     function getIndexDI() {
@@ -61,7 +66,7 @@ $().ready(function () {
     }
 
     function jurosCompostos(valor, taxa, periodo) {
-        return valor * (Math.pow(1 + taxa / 100, periodo)) - valor;
+        return valor * (Math.pow(taxa, periodo)) - valor;
     }
 
     function showResults(save) {
