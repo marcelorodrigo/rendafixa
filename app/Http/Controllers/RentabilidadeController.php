@@ -1,0 +1,16 @@
+<?php namespace App\Http\Controllers;
+
+use App\Business\IndicadorBusiness;
+
+class RentabilidadeController extends Controller
+{
+
+    public function index()
+    {
+        $indicadorCDI = new IndicadorBusiness(IndicadorBusiness::$CDI);
+        $cdi = str_replace('.', ',', $indicadorCDI->getUltimoIndiceXML()->getValue());
+
+        return view('rentabilidade', compact('cdi'));
+    }
+
+}
