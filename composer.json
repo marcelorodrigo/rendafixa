@@ -8,8 +8,7 @@
 		"laravel/framework": "5.1.x",
         "ext-soap": "*",
 		"illuminate/html": "~5.0",
-		"barryvdh/laravel-ide-helper": "~2.0",
-		"php": "7.x"
+		"barryvdh/laravel-ide-helper": "~2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
