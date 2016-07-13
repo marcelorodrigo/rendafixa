@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.1.x",
+		"laravel/framework": "5.0.x",
         "ext-soap": "*",
 		"illuminate/html": "~5.0",
 		"barryvdh/laravel-ide-helper": "~2.0"
