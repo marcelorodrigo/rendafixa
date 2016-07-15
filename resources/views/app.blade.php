@@ -20,7 +20,7 @@
       ga('create', 'UA-60343512-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body role="document">
     <nav class="navbar navbar-default navbar-fixed-top">
