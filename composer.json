@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
+		"php": "7.2.*",
 		"laravel/framework": "5.1.0",
         "ext-soap": "*",
 		"illuminate/html": "~5.0",
