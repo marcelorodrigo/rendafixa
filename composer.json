@@ -9,7 +9,7 @@
 		"laravel/framework": "5.1.46",
         "ext-soap": "*",
 		"illuminate/html": "5.0.0",
-		"barryvdh/laravel-ide-helper": "2.4.3"
+		"barryvdh/laravel-ide-helper": "2.7.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "4.8.36",
