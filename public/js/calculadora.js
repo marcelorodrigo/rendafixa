@@ -1,6 +1,6 @@
 $().ready(function () {
     function savePreferences() {
-        var preferences = {
+        const preferences = {
             amount: $("#amount").val(),
             period: $("#period").val(),
             taxcdb: $("#cdb").val(),
@@ -25,18 +25,18 @@ $().ready(function () {
     function getIndexCDB() {
         var taxa = parseFloat($("#cdb").val()) / 100;
         var di = parseFloat($("#di").val());
-        return Math.pow(((taxa * di) / 100 + 1), (1/12));
+        return Math.pow(((taxa * di) / 100 + 1), (1 / 12));
     }
 
     function getIndexTDSELIC() {
-      var selic = parseFloat($("#selic").val());
-      return Math.pow((selic / 100 + 1), (1/12));
+        var selic = parseFloat($("#selic").val());
+        return Math.pow((selic / 100 + 1), (1 / 12));
     }
 
     function getIndexLCI() {
-      var taxa = parseFloat($("#lci").val()) / 100;
-      var di = parseFloat($("#di").val());
-      return Math.pow(((taxa * di) / 100 + 1), (1/12));
+        var taxa = parseFloat($("#lci").val()) / 100;
+        var di = parseFloat($("#di").val());
+        return Math.pow(((taxa * di) / 100 + 1), (1 / 12));
     }
 
     function getIndexDI() {
@@ -60,9 +60,12 @@ $().ready(function () {
         }
     }
 
-    function getIndexBVMF() {
-        var periodo = $("#period").val();
-        return Math.ceil(periodo / 6) * (0.003 / 2);
+    function getIndexBVMF(amount) {
+        if (amount <= 10_000) {
+            return 0;
+        }
+        const period = $("#period").val();
+        return Math.ceil(period / 6) * (0.003 / 2);
     }
 
     function jurosCompostos(valor, taxa, periodo) {
@@ -83,7 +86,7 @@ $().ready(function () {
 
         var result_tdselic = jurosCompostos(investimento, getIndexTDSELIC(), periodo);
         var ir_tdselic = result_tdselic * (index_ir / 100);
-        var bvmf_tdselic = investimento * getIndexBVMF();
+        const bvmf_tdselic = investimento * getIndexBVMF(investimento);
         var liquido_tdselic = (result_tdselic - ir_tdselic - bvmf_tdselic);
 
         changeBar('bar-poupanca', result_poupanca.toFixed(2));
@@ -118,7 +121,7 @@ $().ready(function () {
 
     showResults(false);
 
-    $(".form-control").on('blur', function () {
+    $(".form-control").on('blur change', function () {
         showResults(true);
     })
 });
