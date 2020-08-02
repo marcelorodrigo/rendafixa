@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fe90cec8d1d108e5f5418b6805f0e7e",
+    "content-hash": "3206aa4a2043d3549c88eaf97e072dac",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -753,16 +753,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.69",
+            "version": "1.0.70",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "7106f78428a344bc4f643c233a94e48795f10967"
+                "reference": "585824702f534f8d3cf7fab7225e8466cc4b7493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/7106f78428a344bc4f643c233a94e48795f10967",
-                "reference": "7106f78428a344bc4f643c233a94e48795f10967",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/585824702f534f8d3cf7fab7225e8466cc4b7493",
+                "reference": "585824702f534f8d3cf7fab7225e8466cc4b7493",
                 "shasum": ""
             },
             "require": {
@@ -773,7 +773,7 @@
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "phpspec/phpspec": "^3.4",
+                "phpspec/phpspec": "^3.4 || ^4.0 || ^5.0 || ^6.0",
                 "phpunit/phpunit": "^5.7.26"
             },
             "suggest": {
@@ -839,20 +839,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2020-05-18T15:13:39+00:00"
+            "time": "2020-07-26T07:20:36+00:00"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.25.4",
+            "version": "1.25.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "3022efff205e2448b560c833c6fbbf91c3139168"
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3022efff205e2448b560c833c6fbbf91c3139168",
-                "reference": "3022efff205e2448b560c833c6fbbf91c3139168",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +926,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-22T07:31:27+00:00"
+            "time": "2020-07-23T08:35:51+00:00"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -1308,7 +1308,7 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.42",
+            "version": "v3.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
@@ -2516,16 +2516,16 @@
         },
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v171",
+            "version": "v178",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "9760ff33fa8dec0baae3bd8040dd4e49c4ffa271"
+                "reference": "11809152efa1c7fbe2101d28ef530d689d1e56b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/9760ff33fa8dec0baae3bd8040dd4e49c4ffa271",
-                "reference": "9760ff33fa8dec0baae3bd8040dd4e49c4ffa271",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/11809152efa1c7fbe2101d28ef530d689d1e56b9",
+                "reference": "11809152efa1c7fbe2101d28ef530d689d1e56b9",
                 "shasum": ""
             },
             "bin": [
@@ -2556,7 +2556,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2020-02-11T09:03:51+00:00"
+            "time": "2020-07-09T18:00:35+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3738,7 +3738,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.2.*",
+        "php": "^7.2.0",
         "ext-soap": "*"
     },
     "platform-dev": [],
