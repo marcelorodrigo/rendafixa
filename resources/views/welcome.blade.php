@@ -122,5 +122,5 @@
     </div>
 @endsection
 @section('footer')
-    <script type="text/javascript" src="/js/calculadora.js?20200802"></script>
+    <script type="text/javascript" src="/js/calculadora.js?20200803"></script>
 @endsection

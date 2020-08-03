@@ -60,12 +60,14 @@ $().ready(function () {
         }
     }
 
-    function getIndexBVMF(amount) {
-        if (amount <= 10_000) {
+    function getB3TaxOverInvestment(amount) {
+        const amountNoTax = 10_000;
+        if (amount <= amountNoTax) {
             return 0;
         }
         const period = $("#period").val();
-        return Math.ceil(period / 6) * (0.003 / 2);
+        const index = Math.ceil(period / 6) * (0.003 / 2);
+        return (amount - amountNoTax) * index;
     }
 
     function jurosCompostos(valor, taxa, periodo) {
@@ -86,8 +88,8 @@ $().ready(function () {
 
         var result_tdselic = jurosCompostos(investimento, getIndexTDSELIC(), periodo);
         var ir_tdselic = result_tdselic * (index_ir / 100);
-        const bvmf_tdselic = investimento * getIndexBVMF(investimento);
-        var liquido_tdselic = (result_tdselic - ir_tdselic - bvmf_tdselic);
+        const b3_tdselic = getB3TaxOverInvestment(investimento);
+        var liquido_tdselic = (result_tdselic - ir_tdselic - b3_tdselic);
 
         changeBar('bar-poupanca', result_poupanca.toFixed(2));
         changeBar('bar-cdb', (result_cdb - ir_cdb).toFixed(2));
@@ -104,7 +106,7 @@ $().ready(function () {
 
         $("#result-tdselic").find('span.total').html(result_tdselic.toFixed(2));
         $("#result-tdselic").find('span.ir').html(ir_tdselic.toFixed(2) + "  <span class='badge'>" + index_ir + "%</span>");
-        $("#result-tdselic").find('span.bvmf').html(bvmf_tdselic.toFixed(2));
+        $("#result-tdselic").find('span.bvmf').html(b3_tdselic.toFixed(2));
         $("#result-tdselic").find('span.liquido').html(liquido_tdselic.toFixed(2));
 
         if (save) {
