@@ -37,24 +37,11 @@
                     <div class="input-group-addon">% {{trans('simulador.ao.ano')}}</div>
                 </div>
             </div>
-
-            <!-- separador -->
-
-            <!--
-            <div class="form-group">
-                <label for="di">Taxa Administrativa</label>
-                <div class="input-group">
-                    <input type="number" class="form-control" id="di" placeholder="Taxa Administrativa" value="0"
-                           min="0" max="100"/>
-                    <div class="input-group-addon">% ao ano</div>
-                </div>
-            </div>
-            -->
             <div class="form-group">
                 <label for="cdb">{{ trans('simulador.cdb') }}</label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="cdb" placeholder="{{ trans('rendimento.cdb') }}" value="{{ $taxcdb }}" min="0"
-                           max="100"/>
+                           max="1000"/>
                     <div class="input-group-addon">% {{ trans('simulador.di') }}</div>
                 </div>
             </div>
@@ -62,7 +49,7 @@
                 <label for="lci">{{ trans('simulador.lci.lca') }}</label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="lci" placeholder="{{ trans('rendimento.lci.lca') }}" value="{{ $taxlci }}"
-                           min="0" max="100"/>
+                           min="0" max="1000"/>
                     <div class="input-group-addon">% {{ trans('simulador.di') }}</div>
                 </div>
             </div>
@@ -122,5 +109,5 @@
     </div>
 @endsection
 @section('footer')
-    <script type="text/javascript" src="/js/calculadora.js?20200803"></script>
+    <script type="text/javascript" src="/js/calculadora.js?20201120"></script>
 @endsection
