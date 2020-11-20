@@ -14,8 +14,8 @@ class PreferencesVO
 	const PREFERENCES_LIFESPAN = 20160;
 	const DEFAULT_AMOUNT = 1000;
 	const DEFAULT_PERIOD = 12;
-	const DEFAULT_TAXCDB = 83;
-	const DEFAULT_TAXLCI = 91;
+	const DEFAULT_TAXCDB = 105;
+	const DEFAULT_TAXLCI = 100;
 	private $amount;
 	private $period;
 	private $taxcdb;
