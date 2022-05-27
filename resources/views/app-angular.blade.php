@@ -16,7 +16,7 @@
         ga('create', 'UA-60343512-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body role="document">
 <nav class="navbar navbar-default navbar-fixed-top">
