@@ -100,8 +100,8 @@
                 Taxa Bovespa: R$ <span class="bvmf">0</span><br />
                 Valor Líquido: R$ <span class="liquido">0</span><br />
                 <div class="progress">
-                    <div id="bar-tdselic" class="progress-bar progress-bar-success" role="progressbar"
-                         style="width: 0%; min-width: 2em;">
+                    <div id="bar-tdselic" class="progress-bar progress-bar-warning" role="progressbar"
+                         style="width: 0; min-width: 2em;">
                         0%
                     </div>
                 </div>
