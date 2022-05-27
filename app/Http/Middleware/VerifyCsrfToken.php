@@ -1,20 +1,17 @@
-<?php namespace App\Http\Middleware;
+<?php
 
-use Closure;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+namespace App\Http\Middleware;
 
-class VerifyCsrfToken extends BaseVerifier {
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 
-	/**
-	 * Handle an incoming request.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  \Closure  $next
-	 * @return mixed
-	 */
-	public function handle($request, Closure $next)
-	{
-		return parent::handle($request, $next);
-	}
-
+class VerifyCsrfToken extends Middleware
+{
+    /**
+     * The URIs that should be excluded from CSRF verification.
+     *
+     * @var array<int, string>
+     */
+    protected $except = [
+        //
+    ];
 }

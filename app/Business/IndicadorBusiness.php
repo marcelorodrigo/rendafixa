@@ -32,10 +32,8 @@ class IndicadorBusiness
 
 	private function soap($conf)
 	{
-		$proxy = $this->getProxyConfiguration();
-		$client = SOAP::getInstance($this->url, $proxy);
-		$soapCallResult = $client->call($conf);
-		return $soapCallResult;
+		$client = SOAP::getInstance($this->url);
+        return $client->call($conf);
 	}
 
 	private function mapToIndicadorVO($xmlData){
@@ -54,12 +52,12 @@ class IndicadorBusiness
 		return $indicador;
 	}
 
-	/**
-	 *Soma o indice dos ultimos 12 meses
-	 * @access public
-	 * @param type XML retornado da função soap
-	 * @return A soma dos indices
-	 */
+    /**
+     *Soma o indice dos ultimos 12 meses
+     * @access public
+     * @param $xml Object retornado da função soap
+     * @return float soma dos indices
+     */
 	public function sumLast12Months($xml)
 	{
 		$total = 1;
@@ -76,7 +74,7 @@ class IndicadorBusiness
 	public function getUltimoIndiceXML()
 	{
 		$cacheKey = 'index' . $this->serieCode;
-		$value = Cache::get($cacheKey, null);
+		$value = Cache::get($cacheKey);
 
 		if($value == null){
 			$conf[0] = 'getUltimoValorXML';
@@ -102,15 +100,5 @@ class IndicadorBusiness
 		$conf[0] = 'getValoresSeriesXML';
 		$conf[1] = array('codigoSeries' => array($this->serieCode), 'dataInicio' => $dateBegin, 'dataFim' => $dateEnd);
 		return $this->soap($conf);
-	}
-
-	private function getProxyConfiguration()
-	{
-		$proxy = array(
-			'proxy_host' => "10.192.38.86",
-			'proxy_port' => 80,
-			'proxy_login' => "c090762@CORPCAIXA",
-			'proxy_password' => "Ro3648");
-		return $proxy;
 	}
 }

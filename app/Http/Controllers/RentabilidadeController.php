@@ -2,7 +2,7 @@
 
 use App\Business\IndicadorBusiness;
 
-class RentabilidadeController extends Controller
+class RentabilidadeController extends WebController
 {
 
     public function index()
