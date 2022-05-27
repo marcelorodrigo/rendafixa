@@ -7,10 +7,6 @@
     <title>Calculadora Renda Fixa</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/rendafixa.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,6 +16,7 @@
         ga('create', 'UA-60343512-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body role="document">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -55,7 +52,6 @@
         @yield('content')
     </div>
 </div>
-<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/angular.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 @yield('footer')

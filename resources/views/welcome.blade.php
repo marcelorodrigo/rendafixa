@@ -2,7 +2,8 @@
 @section('content')
     <h2>{{ trans('simulador.title') }}</h2>
     <div class="col-md-4">
-        {!! Form::open() !!}
+        <form>
+            @csrf
             <input type="hidden" name="poupanca" id="poupanca" value="{{ $poupanca }}" />
             <div class="form-group">
                 <label for="amount">{{ trans('simulador.valor.da.aplicacao') }}</label>
@@ -53,7 +54,7 @@
                     <div class="input-group-addon">% {{ trans('simulador.di') }}</div>
                 </div>
             </div>
-        {!! Form::close() !!}
+        </form>
     </div>
     <div class="col-md-offset-1 col-md-6">
         <div id="results">
@@ -109,5 +110,5 @@
     </div>
 @endsection
 @section('footer')
-    <script type="text/javascript" src="/js/calculadora.js?20201120"></script>
+    <script type="text/javascript" src="/js/calculadora.js"></script>
 @endsection

@@ -53,5 +53,5 @@
 @endsection
 @section('footer')
     <script type="text/javascript" src="/js/math.min.js"></script>
-    <script type="text/javascript" src="/js/calculadora-rentabilidade.js?1"></script>
+    <script type="text/javascript" src="/js/calculadora-rentabilidade.js"></script>
 @endsection

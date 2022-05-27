@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class IndicadorController extends Controller {
+class IndicadorController extends WebController {
 
 	public function api($indicador)
 	{

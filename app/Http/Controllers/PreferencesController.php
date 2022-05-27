@@ -5,7 +5,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Request;
 
-class PreferencesController extends Controller
+class PreferencesController extends WebController
 {
 
 	public function store()
