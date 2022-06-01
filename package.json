@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "axios": "^0.27",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.44",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
     }
