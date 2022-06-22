@@ -8,14 +8,14 @@
             <label for="valor-inicial">Valor inicial</label>
             <div class="input-group">
                 <div class="input-group-addon">R$</div>
-                <input type="text" class="form-control" id="valor-inicial" placeholder="Valor inicial" class="mask-money" ng-model="valorInicial" ng-change="calculate()"/>
+                <input type="text" class="form-control mask-money" id="valor-inicial" placeholder="Valor inicial" ng-model="valorInicial" ng-change="calculate()"/>
             </div>
         </div>
         <div class="form-group">
             <label for="valor-final">Valor final</label>
             <div class="input-group">
                 <div class="input-group-addon">R$</div>
-                <input type="text" class="form-control" id="valor-final" placeholder="Valor final" class="mask-money" ng-model="valorFinal" ng-change="calculate()"/>
+                <input type="text" class="form-control mask-money" id="valor-final" placeholder="Valor final" ng-model="valorFinal" ng-change="calculate()"/>
             </div>
         </div>
         <div class="form-group">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="di">{{ trans('simulador.taxa.di') }} <a href="http://www.cetip.com.br" target="_blank" title="Cetip">?</a></label>
+            <label for="di">{{ trans('simulador.taxa.di') }} <a href="http://www.cetip.com.br" target="_blank" title="Cetip" rel="noopener">?</a></label>
             <div class="input-group">
                 <input type="input" class="form-control" id="di" placeholder="{{ trans('simulador.taxa.di') }}" ng-model="di" ng-change="calculate()"/>
                 <div class="input-group-addon">% {{trans('simulador.ao.ano')}}</div>
