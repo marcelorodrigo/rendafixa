@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="di">{{ trans('simulador.taxa.di') }} <a href="http://www.cetip.com.br" target="_blank" title="Cetip">?</a></label>
+                <label for="di">{{ trans('simulador.taxa.di') }} <a href="https://www.b3.com.br/pt_br/" target="_blank" rel="noopener" title="B3">?</a></label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="di" placeholder="{{ trans('simulador.taxa.di') }}" value="{{$cdi}}" min="0"
                            max="100"/>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="di">{{ trans('simulador.taxa.selic') }}</label>
+                <label for="selic">{{ trans('simulador.taxa.selic') }}</label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="selic" placeholder="{{ trans('simulador.taxa.selic') }}" value="{{$selic}}" min="0"
                            max="100"/>
