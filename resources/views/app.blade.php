@@ -34,6 +34,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    <li><a href="{{ url('novo') }}" class="text-primary"><b>Novo Site (preview)</b></a></li>
                     <li><a href="{{ url('rentabilidade') }}">Encontrar rentabilidade</a></li>
                     <li><a href="{{ url('indicador/selic') }}">{{ trans('navigation.selic') }}</a></li>
                     <li><a href="{{ url('indicador/cdi') }}">{{ trans('navigation.cdi') }}</a></li>

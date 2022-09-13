@@ -25,6 +25,10 @@ Route::get('sobre', function () {
     return view('about');
 });
 
+Route::get('novo', function () {
+    return view('novo');
+});
+
 Route::get('info', function () {
     phpinfo();
 });
