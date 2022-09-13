@@ -1,5 +1,11 @@
 @extends('app')
 @section('content')
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        <h4>Novo Site!</h4>
+        <div><a
+                href="https://rendafixa.github.io/?utm_source=heroku&utm_medium=home&utm_campaign=newproject">https://rendafixa.github.io/</a></div>
+    </div>
     <h2>{{ trans('simulador.title') }}</h2>
     <div class="col-md-4">
         <form>
