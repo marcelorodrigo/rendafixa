@@ -22,7 +22,7 @@ Route::get('indicador/{indicador}', [IndicadorController::class, 'show'])
     ->where('indicador', '[A-Za-z]+');
 
 Route::get('sobre', function () {
-    return redirect('https://rendafixa.github.io/sobre', 301);
+    return redirect('https://rendafixa.github.io/sobre/', 301);
 });
 
 Route::get('novo', function () {
