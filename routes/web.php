@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\IndicadorController;
 use App\Http\Controllers\PreferencesController;
 use App\Http\Controllers\RentabilidadeController;
-use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,13 +14,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [WelcomeController::class, 'index']);
+const NEW_WEBSITE = 'https://rendafixa.github.io/';
+const INDICADOR_REGEX = '[A-Za-z]+';
+
+Route::get('/', function () {
+    return redirect(NEW_WEBSITE, 301);
+});
 Route::get('/rentabilidade', [RentabilidadeController::class, 'index']);
-Route::get('indicador/{indicador}', [IndicadorController::class, 'show'])
-    ->where('indicador', '[A-Za-z]+');
+Route::get('indicador/{indicador}', function () {
+    return redirect(NEW_WEBSITE, 301);
+})
+    ->where('indicador', INDICADOR_REGEX);
 
 Route::get('sobre', function () {
-    return redirect('https://rendafixa.github.io/sobre/', 301);
+    return redirect(NEW_WEBSITE . 'sobre/', 301);
 });
 
 Route::get('novo', function () {
@@ -35,8 +40,12 @@ Route::get('info', function () {
 
 Route::post('preferences', [PreferencesController::class, 'store']);
 
-Route::get('api/{indicador}', [IndicadorController::class, 'api'])
-    ->where('indicador', '[A-Za-z]+');
+Route::get('api/{indicador}', function () {
+    return redirect(NEW_WEBSITE, 301);
+})
+    ->where('indicador', INDICADOR_REGEX);
 
-Route::get('indicador/{indicador}/json', [IndicadorController::class, 'api'])
-    ->where('indicador', '[A-Za-z]+');
+Route::get('indicador/{indicador}/json', function () {
+    return redirect(NEW_WEBSITE, 301);
+})
+    ->where('indicador', INDICADOR_REGEX);
