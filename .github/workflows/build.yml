@@ -15,7 +15,7 @@ jobs:
         with:
           php-version: '8.1'
           extensions: soap, simplexml
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
